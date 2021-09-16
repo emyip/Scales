@@ -1,11 +1,31 @@
 void setup() {
-  size(500, 500);  //feel free to change the size
-  noLoop(); //stops the draw() function from repeating
+  size(350, 350);
+  noLoop();
 }
 void draw() {
-  //your code here
+  for (int x = 0; x <= 400; x = x + 50) {
+    for (int y = 0; y <= 400; y = y + 50) {
+      double randomColor = (Math.random()*3);
+      if (randomColor < 1) {
+        fill(255, 192, 203);
+      } else if (randomColor < 2) {
+        fill(7, 87, 152);
+      } else {
+        fill(162, 40, 255);
+      }
+      pink(x, y);
+    }
+  }
 }
-void scale(int x, int y) {
-  //your code here
+//900 x 600
+void pink(int x, int y) {
+  beginShape();
+  curveVertex(x- 50/4, y - 150/4);
+  curveVertex(x - 50/4, y - 150/4);
+  curveVertex(x - 160/4, y - 420/4);
+  curveVertex(x - 360/4, y - 450/4);
+  curveVertex(x - 280/4, y - 100/4);
+  curveVertex(x - 280/4, y - 100/4);
+  endShape();
 }
 

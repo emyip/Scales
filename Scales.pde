@@ -22,7 +22,7 @@ double randomColor = (Math.random()*3);
     }
   }
 }
-//900 x 600
+
 void pink(int x, int y) {
   beginShape();
   curveVertex(x- 50/4, y - 150/4);
